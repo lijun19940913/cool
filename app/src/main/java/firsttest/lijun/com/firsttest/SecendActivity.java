@@ -19,8 +19,11 @@ public class SecendActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secend);
+        Intent intent=getIntent();
+        String text=intent.getStringExtra("data");
         edit=(TextView) findViewById(R.id.TextView1);
         String inputText=load();
+        edit.setText(inputText);
         if (!TextUtils.isEmpty(inputText)){
             edit.setText(inputText);
             Toast.makeText(this,"restoring is suceeded",Toast.LENGTH_SHORT).show();

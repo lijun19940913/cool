@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        edit=(EditText) findViewById(R.id.text1);
-        button=(Button) findViewById(R.id.button1);
+        edit=findViewById(R.id.text1);
+        button=findViewById(R.id.button1);
         button.setOnClickListener(this);
     }
 
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.button1:
                 Intent intent=new Intent(MainActivity.this,SecendActivity.class);
+                intent.putExtra("data",edit.getText().toString());
                 startActivity(intent);
                 break;
             default:
