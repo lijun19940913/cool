@@ -21,14 +21,14 @@ public class SecendActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_secend);
         Intent intent=getIntent();
         String text=intent.getStringExtra("data");
-        edit=(TextView) findViewById(R.id.TextView1);
+        edit= findViewById(R.id.TextView1);
         String inputText=load();
-        edit.setText(inputText);
+        edit.setText(text);
         if (!TextUtils.isEmpty(inputText)){
             edit.setText(inputText);
             Toast.makeText(this,"restoring is suceeded",Toast.LENGTH_SHORT).show();
         }
-        button=(Button) findViewById(R.id.button2);
+        button=findViewById(R.id.button2);
         button.setOnClickListener(this);
 
     }
